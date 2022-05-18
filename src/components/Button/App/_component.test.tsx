@@ -1,10 +1,9 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import { FlatButton } from '.'
+import { AppButton } from '.'
 
 describe('FlatButton', () => {
   it('should render correctly', () => {
-    const ui = <FlatButton>abc</FlatButton>
+    const ui = <AppButton>abc</AppButton>
     render(ui)
     const a = screen.getByRole('button')
     expect(true).toBeTruthy()
