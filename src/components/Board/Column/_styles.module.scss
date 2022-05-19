@@ -1,27 +1,17 @@
 @import 'src/styles/app.module.scss';
 .column {
-  @apply p-2 bg-slate-100 rounded-lg;
   max-width: 282px;
   min-width: 282px;
-  .header {
-    @apply flex flex-row items-center;
-    .title {
-      @include hoverTransition('', bg-slate-200);
-      @apply flex-1 p-2;
-      @apply text-left uppercase rounded-md cursor-pointer;
-    }
-    .moreOption {
-      @apply min-w-min opacity-0 transition-opacity;
-      .button {
-        @apply min-w-0;
-      }
-    }
-    &:hover .moreOption {
-      @apply opacity-100;
-    }
+}
+
+.header {
+  .option {
+  }
+  &:hover .option {
+    @apply opacity-100;
   }
 }
 
-.card-section {
-  @apply py-2;
+.title {
+  @include hoverTransition('', bg-slate-200);
 }

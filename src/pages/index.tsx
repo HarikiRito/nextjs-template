@@ -17,7 +17,6 @@ const Home: NextPage = () => {
 
       <main>
         <KanbanBoard />
-        <AppFlatButton>abc</AppFlatButton>
       </main>
     </div>
   )
