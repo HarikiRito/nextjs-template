@@ -2,6 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { AppButton } from 'src/components/Button/App'
+import { KanbanBoard } from 'src/modules/KanbanBoard'
+import { AppFlatButton } from 'src/components/Button/Flat'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Home: NextPage = () => {
   return (
@@ -13,11 +16,19 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <AppButton>Test Button</AppButton>
-        <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+        <KanbanBoard />
+        <AppFlatButton>abc</AppFlatButton>
       </main>
     </div>
   )
 }
 
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+      // Will be passed to the page component as props
+    },
+  }
+}
 export default Home
