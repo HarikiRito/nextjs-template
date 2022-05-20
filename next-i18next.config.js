@@ -4,5 +4,6 @@ module.exports = {
     locales: ['en'],
   },
   localePath: './src/locales',
+  localeExtension: 'json',
   reloadOnPrerender: true,
 }
