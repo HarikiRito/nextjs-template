@@ -7,7 +7,7 @@ export const AppFlatButton: FC<Props> = (props) => {
   const {} = _useState(props)
   const { children, className, ...rest } = props
   return (
-    <Button className={cls(styles.container, className)} {...rest}>
+    <Button className={cls('text-black', className)} {...rest}>
       {children}
     </Button>
   )
