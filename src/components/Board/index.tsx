@@ -1,10 +1,9 @@
 import React, { FC } from 'react'
-import _useState, { Props } from './_store'
 import styles from './_styles.module.scss'
 import { AppBoardColumn } from 'src/components/Board/Column'
 
+interface Props {}
 export const AppBoard: FC<Props> = (props) => {
-  const {} = _useState(props)
   return (
     <div>
       <AppBoardColumn />

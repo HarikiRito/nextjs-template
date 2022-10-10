@@ -19,20 +19,6 @@ export interface Props {
   children?: any
 }
 
-const getItemStyle = (
-  isDragging: boolean,
-  draggableStyle: DraggableProvidedDraggableProps['style'],
-) => ({
-  // some basic styles to make the items look a bit nicer
-  userSelect: 'none',
-
-  // change background colour if dragging
-  background: isDragging ? 'lightgreen' : 'grey',
-
-  // styles we need to apply on draggables
-  ...draggableStyle,
-})
-
 export const AppBoardColumn: FC<Props> = (props) => {
   const _state = _useState(props)
   const cards = [
@@ -53,7 +39,7 @@ export const AppBoardColumn: FC<Props> = (props) => {
       title: 'Card 4',
     },
   ]
-  const { t } = useTranslation('common')
+  const { t } = useTranslation()
   return (
     <div className={cls('p-2 bg-slate-100 rounded-lg', styles.column)}>
       <div className={cls('flex flex-row items-center', styles.header)}>

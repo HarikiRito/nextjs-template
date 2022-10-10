@@ -9,16 +9,11 @@ export interface Props {
   title: string
 }
 export const AppBoardCard: FC<Props> = (props) => {
-  const _state = _useState(props)
   const { title } = props
-  const { isDragging } = _state.dragMonitor
   return (
     <div
       className={cls(
         'bg-white drop-shadow-md rounded-sm py-2 pl-3 pr-2 cursor-pointer transition-none hover:bg-gray-50 flex flex-row',
-        {
-          'bg-gray-50 cursor-grabbing invisible': isDragging,
-        },
       )}
     >
       <div className='flex-1'>
