@@ -1,13 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { AppButton } from 'src/components/Button/App'
-import { KanbanBoard } from 'src/modules/KanbanBoard'
-import { AppFlatButton } from 'src/components/Button/Flat'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { AppBoardCard } from 'src/components/Board/Card'
-import { resetServerContext } from 'react-beautiful-dnd'
-import { NoSSR } from 'src/components/NoSSR'
 
 const Home: NextPage = () => {
   return (
@@ -18,11 +11,7 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>
-        <NoSSR>
-          <KanbanBoard />
-        </NoSSR>
-      </main>
+      <main></main>
     </div>
   )
 }

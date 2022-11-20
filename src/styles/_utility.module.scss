@@ -1,7 +1,0 @@
-.hoverOpacityTransition {
-  @apply opacity-0 transition-opacity hover:opacity-100;
-}
-
-@mixin hoverTransition($initial, $dest) {
-  @apply #{$initial} transition-all hover:#{$dest};
-}
